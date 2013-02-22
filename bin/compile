@@ -78,4 +78,4 @@ cd $BUILD_DIR
 
 # compile to Javascript (assuming only file is index.html)
 cd $BUILD_DIR
-dart2js --minify web/out/index.html_bootstrap.dart
+/app/dart-sdk/bin/dart2js --minify web/out/index.html_bootstrap.dart
