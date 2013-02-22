@@ -71,3 +71,11 @@ done
 # move packages from cache directory into build directory
 cd $CACHE_DIR
 cp -r $CACHE_DIR/pub-cache $BUILD_DIR/$PACKAGES_DIR
+
+# for web_ui call build.dart
+cd $BUILD_DIR
+/app/dart-sdk/bin/dart build.dart
+
+# compile to Javascript (assuming only file is index.html)
+cd $BUILD_DIR
+dart2js --minify web/out/index.html_bootstrap.dart
